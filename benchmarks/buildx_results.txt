@@ -1,0 +1,26 @@
+docker buildx кросс-платформенная сборка
+Дата: 10.04.2026
+
+Результат: успешно собраны образы для платформ:
+- linux/amd64 (go-app:amd64) — 6.61 MB
+- linux/arm64 (go-app:arm64) — 7.85 MB
+
+Команды:
+docker buildx build --platform linux/amd64 -t go-app:amd64 --load .
+docker buildx build --platform linux/arm64 -t go-app:arm64 --load .
+
+Сравнение размеров образов Go-приложения:
+
+| Образ | Размер |
+|-------|--------|
+| go-app:simple | 23.6 MB |
+| go-app:alpine | 23.6 MB |
+| go-app:multistage | 6.61 MB |
+| go-app:amd64 | 6.61 MB |
+| go-app:arm64 | 7.85 MB |
+| go-app:multiarch | 31.5 MB |
+
+Вывод:
+- Многоэтапная сборка уменьшает размер образа в 3.5 раза
+- Образы для amd64 и arm64 имеют сопоставимый размер
+- docker buildx успешно собирает образы для разных архитектур
