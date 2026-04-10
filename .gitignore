@@ -1,0 +1,38 @@
+cd ..
+echo "# Binaries" > .gitignore
+echo "*.exe" >> .gitignore
+echo "*.exe~" >> .gitignore
+echo "*.dll" >> .gitignore
+echo "*.so" >> .gitignore
+echo "*.dylib" >> .gitignore
+echo "" >> .gitignore
+echo "# Test binary" >> .gitignore
+echo "*.test" >> .gitignore
+echo "" >> .gitignore
+echo "# Output of go coverage" >> .gitignore
+echo "*.out" >> .gitignore
+echo "" >> .gitignore
+echo "# Dependency directories" >> .gitignore
+echo "vendor/" >> .gitignore
+echo "" >> .gitignore
+echo "# Go workspace file" >> .gitignore
+echo "go.work" >> .gitignore
+echo "" >> .gitignore
+echo "# IDE" >> .gitignore
+echo ".idea/" >> .gitignore
+echo ".vscode/" >> .gitignore
+echo "*.iml" >> .gitignore
+echo "" >> .gitignore
+echo "# OS" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo "Thumbs.db" >> .gitignore
+echo "" >> .gitignore
+echo "# Python" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo ".venv/" >> .gitignore
+echo "venv/" >> .gitignore
+echo "" >> .gitignore
+echo "# Rust" >> .gitignore
+echo "target/" >> .gitignore
+echo "Cargo.lock" >> .gitignore
