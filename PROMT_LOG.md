@@ -1,4 +1,4 @@
-Prompt Log
+Promt Log
 Лабораторная работа №11
 Контейнеризация мультиязычных приложений
 
@@ -216,10 +216,29 @@ Prompt Log
 - test: add 13 Go unit tests (all passing) (51358fc)
 - test: fix Rust tests (19 passing) (80e7a4f)
 
+Промпт 18
+Инструмент: DeepSeek-V3.2
+
+Промпт:
+По ревью нужно добавить скрипт для docker buildx (не только результаты, но и процесс). Создай скрипты для Windows и Linux, которые настраивают buildx и собирают образы для amd64 и arm64.
+
+Результат: Создала scripts/buildx.sh для Linux/Mac и scripts/buildx.ps1 для Windows. Скрипты:
+- создают buildx builder
+- собирают образы для linux/amd64 и linux/arm64
+- выводят размеры образов
+
+Проверка: powershell -File scripts/buildx.ps1 → успешная сборка образов:
+- go-app:amd64 — 23.6 MB
+- go-app:arm64 — 7.85 MB
+
+Коммит: feat: add buildx script for multi-arch build
+
+Итого промптов: 18
+
 
 Документация
 
-Промпт 18
+Промпт 19
 Инструмент: DeepSeek-V3.2
 
 Промпт:
@@ -229,7 +248,7 @@ Prompt Log
 
 Коммит: docs: add README with lab results and instructions (9475421)
 
-Промпт 19
+Промпт 20
 Инструмент: DeepSeek-V3.2
 
 Промпт:
@@ -242,8 +261,8 @@ Prompt Log
 
 Итоговая статистика
 
-Всего промптов: 19
-Всего коммитов: 15
+Всего промптов: 20
+Всего коммитов: 17
 
 Что пришлось исправлять вручную:
 - создание go.mod и go.sum вручную
@@ -260,6 +279,7 @@ Prompt Log
 
 Полный список коммитов
 
+5e3bd88 feat: add buildx script for multi-arch build
 fd21375 docs: add PROMPT_LOG.md
 9475421 docs: add README with lab results and instructions
 80e7a4f test: fix Rust tests (19 passing)
